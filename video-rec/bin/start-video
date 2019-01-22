@@ -20,6 +20,8 @@ export VIDEO_PIDFILE="$(cat VIDEO_PIDFILE)"
 export VIDEO_FILE_NAME="$(cat VIDEO_FILE_NAME)"
 export VIDEO_PATH="$(cat VIDEO_PATH)"
 
+chmod 777 VIDEO_FILE_NAME
+
 # Test: supervisorctl -c /etc/supervisor/supervisord.conf status
 export VIDEO=true
 supervisorctl -c /etc/supervisor/supervisord.conf start video-rec

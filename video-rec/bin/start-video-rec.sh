@@ -3,6 +3,9 @@
 # set -e: exit asap if a command exits with a non-zero status
 set -e
 
+#read VIDEO_FILE_NAME file to get the filename
+VIDEO_FILE_NAME=$(cat ~/VIDEO_FILE_NAME)
+
 # Make it portable
 [ -z "${VIDEO_BASE_PATH}" ] && export \
     VIDEO_BASE_PATH="${VIDEOS_DIR}/${VIDEO_FILE_NAME}"
